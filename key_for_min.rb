@@ -3,13 +3,13 @@
 #if method is called and passed, should return nil
 
 def key_for_min_value(name_hash)
-  method = nil
+  ref = nil
   name_hash.each do |key, value|
-    if method == nil
-      method = key
-    elsif value < name_hash[method]
-      method = key
+    if ref == nil
+      ref = key
+    elsif value < name_hash[ref]
+      ref = key
     end
   end
-  method
+  ref
 end
